@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="513b0314-f512-468d-a9c3-6805581ebcf9" activeEnvironment="Default" name="Demo?wsdl" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c04b8385-d7ec-46e1-a43a-5f01d0ff1270" wsaVersion="NONE" name="DemoSoap11Binding" type="wsdl" bindingName="{http://controller}DemoSoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/WebServiceServer/services/Demo?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap11Endpoint/</con:endpoint></con:endpoints><con:operation id="5bb7faa1-b532-41e1-9bea-c7f8b4680eab" isOneWay="false" action="urn:hello" name="hello" bindingOperationName="hello" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="239da3d1-f094-43b4-8809-eda15fdba77c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://controller">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <con:hello/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:hello"/></con:call></con:operation><con:operation id="ec99bc73-a5e3-4631-8894-1a88d703f9fa" isOneWay="false" action="urn:isTCKNCorrect" name="isTCKNCorrect" bindingOperationName="isTCKNCorrect" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d4d5a768-67dc-4b4b-b779-f0d26e1d8004" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://controller">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <con:isTCKNCorrect>\r
+         <!--Optional:-->\r
+         <con:id>23108566810</con:id>\r
+      </con:isTCKNCorrect>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isTCKNCorrect"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="4f67eba1-953b-408d-a584-ecbb073d5d61" wsaVersion="NONE" name="DemoSoap12Binding" type="wsdl" bindingName="{http://controller}DemoSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8080/WebServiceServer/services/Demo?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/WebServiceServer/services/Demo?wsdl"><con:part><con:url>http://localhost:8080/WebServiceServer/services/Demo?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://controller" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://controller" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+  <wsdl:documentation>Please Type your service description here</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://controller">
+      <xs:element name="isTCKNCorrect">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isTCKNCorrectResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="hello">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="helloResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="isTCKNCorrectRequest">
+    <wsdl:part name="parameters" element="ns:isTCKNCorrect"/>
+  </wsdl:message>
+  <wsdl:message name="isTCKNCorrectResponse">
+    <wsdl:part name="parameters" element="ns:isTCKNCorrectResponse"/>
+  </wsdl:message>
+  <wsdl:message name="helloRequest">
+    <wsdl:part name="parameters" element="ns:hello"/>
+  </wsdl:message>
+  <wsdl:message name="helloResponse">
+    <wsdl:part name="parameters" element="ns:helloResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="DemoPortType">
+    <wsdl:operation name="isTCKNCorrect">
+      <wsdl:input message="ns:isTCKNCorrectRequest" wsaw:Action="urn:isTCKNCorrect"/>
+      <wsdl:output message="ns:isTCKNCorrectResponse" wsaw:Action="urn:isTCKNCorrectResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <wsdl:input message="ns:helloRequest" wsaw:Action="urn:hello"/>
+      <wsdl:output message="ns:helloResponse" wsaw:Action="urn:helloResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DemoSoap11Binding" type="ns:DemoPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="isTCKNCorrect">
+      <soap:operation soapAction="urn:isTCKNCorrect" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <soap:operation soapAction="urn:hello" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DemoSoap12Binding" type="ns:DemoPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="isTCKNCorrect">
+      <soap12:operation soapAction="urn:isTCKNCorrect" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <soap12:operation soapAction="urn:hello" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DemoHttpBinding" type="ns:DemoPortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="isTCKNCorrect">
+      <http:operation location="isTCKNCorrect"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hello">
+      <http:operation location="hello"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Demo">
+    <wsdl:port name="DemoHttpSoap11Endpoint" binding="ns:DemoSoap11Binding">
+      <soap:address location="http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap11Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="DemoHttpSoap12Endpoint" binding="ns:DemoSoap12Binding">
+      <soap12:address location="http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap12Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="DemoHttpEndpoint" binding="ns:DemoHttpBinding">
+      <http:address location="http://localhost:8080/WebServiceServer/services/Demo.DemoHttpEndpoint/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="0dadb357-c3d1-49c5-bfdd-52693fd0348d" isOneWay="false" action="urn:hello" name="hello" bindingOperationName="hello" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="38d958aa-5275-4acb-95b1-ea2270625d8d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:con="http://controller">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <con:hello/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:hello"/></con:call></con:operation><con:operation id="5f035fc2-ceb7-463f-b72f-5e6d0cdeefd4" isOneWay="false" action="urn:isTCKNCorrect" name="isTCKNCorrect" bindingOperationName="isTCKNCorrect" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="05fe41f1-1576-468f-a1c1-9541b5b3f414" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/WebServiceServer/services/Demo.DemoHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:con="http://controller">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <con:isTCKNCorrect>\r
+         <!--Optional:-->\r
+         <con:id>2310</con:id>\r
+      </con:isTCKNCorrect>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:isTCKNCorrect"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
