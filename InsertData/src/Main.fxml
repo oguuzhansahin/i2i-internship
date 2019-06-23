@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="316.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Label fx:id="lblstatus" layoutX="33.0" layoutY="14.0" prefHeight="25.0" prefWidth="117.0" text="WELCOME..!" textFill="#c91515">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="-11.0" layoutY="-25.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="135.0" layoutY="251.0" mnemonicParsing="false" onAction="#Save" prefHeight="51.0" prefWidth="108.0" text="SAVE" textFill="#a82e2e" />
+      <TextField fx:id="surnamestatus" layoutX="33.0" layoutY="191.0" promptText="SURNAME" />
+      <TextField fx:id="namestatus" layoutX="33.0" layoutY="123.0" promptText="NAME" />
+      <TextField fx:id="idstatus" layoutX="33.0" layoutY="57.0" promptText="ID" />
+   </children>
+</AnchorPane>
