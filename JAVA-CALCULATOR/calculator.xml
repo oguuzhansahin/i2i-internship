@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DivideResponse xmlns:ns="http://controller">
+         <ns:return>20.0</ns:return>
+      </ns:DivideResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
