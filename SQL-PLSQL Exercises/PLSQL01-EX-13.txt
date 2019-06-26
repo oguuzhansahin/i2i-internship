@@ -1,0 +1,3 @@
+Name of the richest employee-> Steven
+Salary in TL-> 24000
+Salary in dollars-> 4145,077720207253886010362694300518134715
